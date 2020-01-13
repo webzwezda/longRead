@@ -14,7 +14,7 @@ html | Only html template
 
 Git clone 
 
-    
+​    
 
 ### Install modules gulp
 
@@ -43,6 +43,12 @@ All modules ***Gulp***
 Need console spell
 
     sudo npm i -D gulp gulp-if gulp-sass gulp-file-include gulp-sourcemaps gulp-concat browser-sync gulp-uglifyjs
+
+Просто запусти 
+
+```bash
+npm install
+```
 
 ## Commands for run Gulp
 
