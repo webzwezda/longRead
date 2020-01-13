@@ -1,0 +1,9 @@
+build
+node_modules
+.idea
+package-lock.json
+_site
+.idea
+.sass-cache
+.jekyll-metadata
+Gemfile.lock

@@ -1,0 +1,174 @@
+:root {
+
+  --mainHeigt: 60px;
+}
+p,.pageTitle,h2,h3,h4,h5,h6 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+html{
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  --titleColor: #285473;
+}
+img{
+  max-width: 100%;
+}
+body {
+  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+
+
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1 0 auto;
+  }
+}
+.siteHeader {
+  flex: 0 1 auto;
+  min-height: var(--mainHeigt);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.homeLink {
+  text-decoration: none;
+  color: #4BA79A;
+  font-weight: bold;
+  font-size: calc(1rem + 5px);
+  letter-spacing: 2px;
+
+  margin-left: 10px;
+}
+.bestLink {
+
+  text-decoration: none;
+  font-weight: bold;
+  font-size: .85rem;
+  color: #285473;
+  transform: translateY(.1rem);
+  margin-right: 10px;
+
+  &:hover {
+    color: rgba(40, 84, 115, 0.9);
+    text-decoration: underline;
+  }
+
+  &--active{
+    //border-bottom: 1px solid #285473;
+  }
+}
+.siteFooter{
+  flex: 0 1 auto;
+}
+.breadCrumb{
+  &--wrap {
+    background-color: #1c2331;
+  }
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding-left: 0;
+
+  --breadColor: #929fba ;
+
+  li {
+    margin-right: 5px;
+    position: relative;
+    list-style: none;
+
+    &:before {
+      content: "\02022";
+      font-size: calc(.85rem - 2px);
+      color: #7283a7;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+    &:first-child{
+      margin-left: 10px;
+    &:before{
+      content: "";
+    }
+    }
+
+    a {
+      text-decoration: none;
+      line-height: calc(var(--mainHeigt) / 2);
+      color: var(--breadColor);
+      font-size: .85rem;
+    }
+  }
+  &--active{
+    color: #dadfe1 !important;
+  }
+}
+
+@include for-tablet-portrait-up {
+  html{
+    font-size: 16px;
+  }
+  .bestLink {
+    font-size: .7rem;
+  }
+}
+@include for-tablet-landscape-up {
+  :root{
+    --mainWidth: 900px;
+  }
+
+html{
+  font-size: 17px;
+}
+
+  %width {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .bestLink {
+    margin-right: 0;
+  }
+  .siteHeader{
+    @extend %width;
+  }
+.breadCrumb {
+  @extend %width;
+  padding-left: 0;
+  &--wrap {
+
+  }
+}
+  .containerTitle {
+    @extend %width;
+
+    &--wrap {
+    }
+  }
+  .articleBody {
+    @extend %width;
+  }
+  .relatePosts{
+    @extend %width;
+  }
+.footerArticle {
+  @extend %width;
+}
+.siteFooter{
+
+  &--wrap{
+    @extend %width;
+  }
+}
+  }
+@media (max-width: 320px) {
+
+}

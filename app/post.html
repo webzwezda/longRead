@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Что такое идеальный шаблон для дизайна контента?</title>
+    <meta name="theme-color" content="#fafafa">
+    <link href="/assets/image/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="/assets/js/libs-min.js"></script>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+
+@@include("header.html")
+
+<main class="siteMain" itemscope itemprop="mainContentOfPage">
+    @@include("breadcrumb.html")
+    <article itemscope itemtype="http://schema.org/Article">
+
+        <div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+            <div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+                <meta itemprop="width" content="100">
+                <meta itemprop="url" content="./assets/company-logo.png">
+            </div>
+            <meta itemprop="name" content="My company">
+            <meta itemprop="telephone" content="+7 908 461 0434">
+            <meta itemprop="address" content="Владивосток">
+        </div>
+        <div class="_2V-X" id="mainArticle" itemprop="mainEntityOfPage">
+            <meta itemprop="datePublished" content="2018-10-04T12:00:30">
+            <meta itemprop="dateModified" content="2018-03-16 00:00:00 +1000">
+
+
+            <div class="containerTitle--wrap">
+<div class="containerTitle">
+
+                <h1 class="pageTitle" itemprop="headline">
+                    Это описание должно быть длинным для тестирования макета минимум в 70 знаков Regular
+                </h1>
+</div>
+            </div>
+
+            <div class="articleBody" itemprop="articleBody">
+
+                <p class="p0">Это первый параграф и является самым важным так как описывает страницу, должен чем то выделяться и быть примерно в 170 знаков, но это не обязательно. <code>code</code>,  В нем желательно использовать такие тэги как: <em>em</em>, <strong>strong</strong>, <strong><em>em and strong</em></strong>, <code>code</code></p>
+
+                <ol id="anchor"><li><a href="#h2">Заголовки</a></li><li><a href="#links">Ссылки в статье</a></li><li><a href="#termins">Виды терминов</a><ol><li><a href="#anchor2-1">Термины</a></li><li><a href="#anchor2-2">Сноски</a></li></ol></li><li><a href="#api">API</a></li></ol>
+
+                <h2 id="h2">Заголовок второго уровня который не вмещается в одну строку на мобильнике</h2>
+
+                <p>Параграф рыбного текста для того что бы заполнить пустое пространство, он должен быть примерно 170 - 200 символов </p>
+
+                <h3 id="h2">Заголовок h3 уровня который не вмещается в одну строку на мобильнике</h3>
+
+                <p>Параграф рыбного текста для того что бы заполнить пустое пространство, он должен быть примерно 170 - 200 символов </p>
+
+                <h4 id="h2">Заголовок h4 уровня который не вмещается в одну строку на мобильнике</h4>
+
+                <p>Параграф рыбного текста для того что бы заполнить пустое пространство, он должен быть примерно 170 - 200 символов </p>
+
+                <h5 id="h2">Заголовок h5 уровня который не вмещается в одну строку на мобильнике</h5>
+
+                <p>Параграф рыбного текста для того что бы заполнить пустое пространство, он должен быть примерно 170 - 200 символов </p>
+
+                <h6 id="h2">Заголовок h6 уровня который не вмещается в одну строку на мобильнике</h6>
+
+                <p>Параграф рыбного текста для того что бы заполнить пустое пространство, он должен быть примерно 170 - 200 символов </p>
+
+                <h2 id="links">Ссылки в статье</h2>
+
+                <p>Так как ссылки обладают состояниями то они должны быть обрисованны в дизайне макета</p>
+
+                <ul>
+                    <li>Курсор наведен на ссылку</li>
+                    <li>Пользователь нажал на ссылку</li>
+                    <li>Ссылка которую еще не посещал пользователь</li>
+                    <li>Ссылка по которой пользователь уже переходил</li>
+                </ul>
+
+                <p>Хорошим тоном будет показать <a href="#">ссылку</a> в середине абзаца, для оценки органичности с дизайном парагнрафа</p>
+
+                <a href="111.html">Не посещал еще</a>
+
+                <h2 id="termins">Виды терминов которые используются в тексте</h2>
+
+                <p>Расмотрим два способа использования терминов. Для примера возьмем игровой термин <strong>Боссы</strong></p>
+
+                <ul>
+                    <li>Термины</li>
+                    <li>Сноски</li>
+                </ul>
+
+                <h3>Термины</h3>
+
+                <p>С терминами есть броблема так как при создании дизайна они часто получаются похожими на заголовки, но таковыми не являются</p>
+
+                <blockquote><p> Посторайтесь <em>избежать</em> этого и <strong>к слову внизу пример термина и его определения</strong></p></blockquote>
+
+                <dl>
+                    <dt>Боссы</dt>
+                    <dd><p>это <strong>крупные</strong>, <strong>агрессивные</strong> и опасные монстры, которые являются существенной проблемой для неподготовленных игроков. <strong><em>Для убийства босса</em></strong> потребуется наша <em>тактика</em> из <a href="#">гайда</a>. Тут тоже можно использовать тэг <code>code</code></p></dd>
+                </dl>
+
+                <h3>Сноски</h3>
+
+                <p>Я видел ее танцы в тикток<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.
+                    Моне́точка<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> была неотразима.</p>
+
+
+
+                <h4>Нюансы дизайна</h4>
+
+                <p>Само слово нельзя как либо выделять только циферку возле него</p>
+
+                <p>В самом низу есть блок с сноской и было бы хорошо как нибудь его стилилизовать</p>
+
+                <h2>lists</h2>
+
+                <h3>ol</h3>
+
+                <ol><li>При покраснении и припухлости мочки пользуются слабым раствором марганцовки. Несколько раз в день им промывают проблемное место, передвигая сережку. Постепенно опухоль спадает. При необходимости применяют антибактериальные мази: Целестодерм, Левомеколь, тетрациклиновую мазь. При сильной боли деткам дают ибупрофен или парацетамол в соответствующей возрасту дозировке.</li><li>При кровоточивости, которая продолжается несколько дней и даже недель, стоит насторожиться. Обычно после прокола выбегает жидкость (сукровица), а появление крови возможно по разным причинам (одна из них – травмирование сосуда при прокалывании и развитие гиперемии). Сережку придется вынуть, а ранку обработать антисептиком.</li><li>При нагноении помогает обработка проблемного участка спиртом или перекисью водорода. Хорошо помогает Целестодерм, цинковая мазь. Из народного арсенала выручает сок алоэ, масло чайного дерева, настойка календулы, раствор морской соли.</li></ol>
+
+                <h3>ul</h3>
+
+                <ul><li>После нагноения ткань выпадает вместе с серьгой</li><li>Происходит паралич лицевого нерва</li><li>Возникает сильная аллергическая реакция</li><li>Ушная раковина деформируется</li><li>Идет доброкачественный опухолевый процесс</li><li>Воспаление лимфа узлов</li></ul>
+
+                <h2>Изображения</h2>
+                <p>Разбирем тег figure и простую картинку в большом формате и в маленьком</p>
+
+                <h3>Figure</h3>
+
+                <p>изображение в теге фигуре находится всегда по середине страницы</p>
+
+                <figure>
+                    <img class="b-lazy" itemprop="image" data-src="http://placehold.it/900x500/455a64/fff" src="data:image/gif;base64,R0lGODlhswBQAIAAAP///wAAACH5BAEAAAEALAAAAACzAFAAAAKPjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusoKWAAAOw==" alt="Preview">
+                    <figcaption>Коносуба блэд</figcaption>
+                </figure>
+
+                <figure>
+                    <figcaption>Коносуба блэд, это самое класное аниме и его описание не уместить в одну строку</figcaption>
+                    <img class="b-lazy" itemprop="image" data-src="http://placehold.it/250x100/455a64/fff" src="data:image/gif;base64,R0lGODlhswBQAIAAAP///wAAACH5BAEAAAEALAAAAACzAFAAAAKPjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusoKWAAAOw==" alt="Preview">
+
+                </figure>
+
+                <h3>Тэг Img</h3>
+
+                <p>этот тэг служит для полного экранного вывода на мобильном устройстве из чего следует что изображение должно быть минимум в 420px</p>
+                <p>
+                    <img src="http://placehold.it/420x210/455a64/fff" alt="">
+                </p>
+
+               <h2>Пистолетом</h2>
+
+                <p>Мы знаем что делать пирсинг пистолетом не больно, а если оценивать по десяти бальной шкале то это 3 из 10. Но у этого есть один большой или даже очень большой минус.</p>
+
+
+<p>  При проколе пистолетом мочки мы получим рваную рану, а если будем прокалывать хрящ то получим в нем трещину, а она заживает жуть как долго и у этого есть реально плохие последствия в виде келойда.</p>
+              <p>Ко всем этим недостаткам добавляется дополнительное наращивание коши на месте прокола, это может быть не заметно окружающим но вас это будет тревожить.</p>
+
+                <h2>Video</h2>
+
+
+                                <h2>Block Code</h2>
+
+                                <div class="highlighter-rouge">
+                                    <div class="highlight"><pre class="highlight"><code>aspell -l ru dump master | aspell -l ru expand | tr ' ' '\n' &gt; ~/path/russian.dic aa a a a a a a a
+                </code></pre>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <div class="thumb-wrap">
+
+                                    <iframe width="560"
+                                            height="315"
+                                            src="https://youtube.com/embed/DlRqUbQio8M"
+                                            srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;
+
+                &lt;a href=https://youtube.com/embed/DlRqUbQio8M?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/DlRqUbQio8M/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;"
+
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen=""
+                                            title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition"></iframe>
+                                </div>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Month</th>
+                        <th>Month</th>
+                        <th>Assignee</th>
+                        <th>Backup</th>
+                        <th>Month</th>
+                        <th>Month</th>
+                        <th>Month</th>
+                        <th>Assignee</th>
+                        <th>Backup</th>
+                        <th>Month</th>
+                        <th>Assignee</th>
+                        <th>Backup</th>
+                        <th>Month</th>
+                        <th>Assignee</th>
+                        <th>Backup</th>
+                        <th>Month</th>
+                        <th>Assignee</th>
+                        <th>Backup</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>January</td>
+                        <td>January</td>
+                        <td>Dave</td>
+                        <td>Steve</td>
+                        <td>January</td>
+                        <td>January</td>
+                        <td>January </td>
+                        <td>Dave</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Steve</td>
+                        <td>January</td>
+                        <td>Dave</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Steve</td>
+                    </tr>   <tr>
+                        <td>January</td>
+                        <td>January</td>
+                        <td>January</td>
+                        <td>Dave</td>
+                        <td>Steve</td>
+                        <td>January</td>
+                        <td>January</td>
+                        <td>January </td>
+                        <td>Dave</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Steve</td>
+                        <td>January</td>
+                        <td>Dave</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Steve</td>
+                    </tr>   <tr>
+                        <td>January</td>
+                        <td>January</td>
+                        <td>January</td>
+                        <td>Dave</td>
+                        <td>Steve</td>
+                        <td>January</td>
+                        <td>January</td>
+                        <td>January </td>
+                        <td>Dave</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Steve</td>
+                        <td>January</td>
+                        <td>Dave</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Jorge</td>
+                        <td>Steve</td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+                <h3>Социальный замок</h3>
+
+                <section id="sharePage" class="sociaLocker">
+                    <h3 id="brr">Контент спрятался</h3>
+                    <p>Что бы его увидеть нужно поделиться страницей в социальных сетях, зарание спасибо дорогой посетитель</p>
+                    <div class="sociaLocker__btns"><button class="vk-mini" value="http://vkontakte.ru/share.php?url=https://webzwezda.github.io">Vk</button><button class="ok-mini">Ok</button><button class="fb-mini">Fb</button><button class="pin-mini">Pin</button><button class="tw-mini">Tw</button></div>
+                    <button id="btnRemove-share" class="shareClose" >Я уже поделился</button>
+
+                    <template id="productrow">
+                        <a href="#">ssadasdwww</a>
+                    </template>
+                </section>
+
+                <h2>Рекомендация автора</h2>
+
+                <nav class="recommend">
+                    <img alt="Аватар автора"
+                         src="data:image/gif;base64,R0lGODlhgAB9AIAAAP///wAAACH5BAEAAAEALAAAAACAAH0AAAKZjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1trm1QAADs=" data-src="./assets/image/autorPhoto.jpg"
+                         class="photo-recommend b-lazy">
+
+                    <div class="rek--wrap">
+                        <h3><span>Ознакомься с</span></h3>
+                        <div class="link-rek">
+                        <a target="_blank" href="#">mini Link</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <h2>Video</h2>
+
+                <p>Видео высотой максимум в 420 и шириной в 320</p>
+
+                <video  controls  >
+                    <source src="/assets/pronama.mp4" type="video/mp4">
+
+                </video>
+
+
+                <div class="footnotes">
+                    <ol>
+                        <li id="fn:1">
+                            <p>Тикток - это китайская социальная сеть, <a href="#">Подробней</a> позволяющая создавать короткие музыкальные видео&nbsp;<a href="#fnref:1" class="reversefootnote">↩</a></p>
+                        </li>
+                        <li id="fn:2">
+                            <p>Моне́точка — российская певица, музыкант, композитор и автор песен.&nbsp;<a href="#fnref:2" class="reversefootnote">↩</a></p>
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+             <!-- article body -->
+
+            <aside class="relatePosts" itemscope itemtype="http://schema.org/WPSideBar">
+
+                    <article class="containerPaginate__article" >
+                        <a class="link-article" href="/post.html" itemprop="url">
+                            <img class="img-article b-lazy" itemprop="image" data-src="/assets/image/537x240.jpg"
+                                 src="data:image/gif;base64,R0lGODlhswBQAIAAAP///wAAACH5BAEAAAEALAAAAACzAFAAAAKPjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusoKWAAAOw=="
+                                 alt="Preview">
+                            <h2 class="title-article" itemprop="headline">
+                                Относительно короткое описание в 43 символа
+                            </h2>
+                        </a>
+                    </article>
+
+                    <article class="containerPaginate__article" >
+                        <a class="link-article" href="/post.html" itemprop="url">
+                            <img class="img-article b-lazy" itemprop="image" data-src="/assets/image/537x240.jpg"
+                                 src="data:image/gif;base64,R0lGODlhswBQAIAAAP///wAAACH5BAEAAAEALAAAAACzAFAAAAKPjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusoKWAAAOw=="
+                                 alt="Preview">
+                            <h2 class="title-article" itemprop="headline">
+                                Относительно короткое описание в 43 символа Относительно короткое описание в 43 символа
+                            </h2>
+                        </a>
+                    </article>
+
+            </aside>
+
+<footer class="footerArticle">
+    <section class="footerArticle__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <img alt="Аватар автора"
+             src="data:image/gif;base64,R0lGODlhgAB9AIAAAP///wAAACH5BAEAAAEALAAAAACAAH0AAAKZjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1trm1QAADs=" data-src="./assets/image/autorPhoto.jpg"
+             class="photo-author b-lazy">
+        <div class="authorDescr--wrap">
+            <h3 class="author-box-title">
+                <a rel="nofollow"
+                   target="_blank" href="https://vk.com/id519179248">
+                            <span itemprop="name">
+                                Ilya Kozel'
+                            </span>
+                </a>
+            </h3>
+            <p itemprop="description">Я разработчик работающий один. Пожалуйста, рассмотрите возможность подписаться на нашу группу в Вконтакте</p>
+        </div>
+            <script src="https://vk.com/js/api/openapi.js?162"></script>
+
+            <!-- VK Widget -->
+            <div id="vk_groups"></div>
+            <script type="text/javascript">
+                VK.Widgets.Group("vk_groups", {mode: 1, width: "auto", color1: '1D2436', color2: 'E0E0E0', color3: '47A046'}, 20003922);
+            </script>
+    </section>
+
+    <!--
+
+      <section class="comments">
+       <h3>Comments</h3>
+       <div class="comment">
+           coment
+       </div>
+     </section>
+
+     -->
+</footer>
+        </div>
+    </article>
+</main>
+
+
+<footer class="siteFooter">
+    @@include("footer.html")
+</footer>
+<script async src="/assets/js/socialLocker.js"></script>
+</body>
+</html>

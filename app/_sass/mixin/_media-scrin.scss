@@ -1,0 +1,13 @@
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; } // xm - полноценный сайт (планшет)
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; } // sm - все сайты должны быть заточены под него
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; } // md - Final Site
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; } // lg
+}
