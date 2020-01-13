@@ -1,0 +1,66 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% include site/head.html %}
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+
+<header class="siteHeader">
+    {% include site/header.html %}
+</header>
+
+<main class="siteMain" itemscope itemprop="mainContentOfPage">
+
+    <nav class="breadCrumb--wrap" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <ul class="breadCrumb" >
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a {% if page.url == site.url or page.url == '/' %}class="breadCrumb--active"{% endif %} itemprop="item" href="/">
+                    <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1"/>
+            </li>
+
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a {% if page.url contains '/all/' %}class="breadCrumb--active"{% endif %} itemprop="item" href="/all/">
+                    <span itemprop="name">Все посты</span>
+                </a>
+                <meta itemprop="position" content="2"/>
+            </li>
+
+
+
+            {% assign breadCounter = 1 %}
+            {% if page.breadcrumb %}
+            {% for breadcrumb in page.breadcrumb %}
+            {% assign breadCounter = breadCounter | plus: 1 %}
+            <li itemprop="itemListElement" itemscope
+                itemtype="http://schema.org/ListItem">
+                <a {% if forloop.last %}class="breadCrumb--active" {% endif %} itemprop="item" href="{{ breadcrumb.url | prepend: site.baseurl | prepend: site.url | append: '/' }}">
+                    <span itemprop="name">{{ breadcrumb.name }}</span>
+                </a>
+                <meta itemprop="position" content="3"/>
+            </li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </nav>
+
+    {{ content }}
+
+
+</main>
+
+
+<footer class="siteFooter">
+    {% include site/footer.html %}
+</footer>
+{% if page.sociaLocker == 'true' %}
+    <script async src="/assets/js/sociaLocker.js"></script>
+{% endif %}
+<script async src="{{ "/assets/js/libs-min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+</body>
+</html>

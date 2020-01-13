@@ -1,0 +1,250 @@
+---
+layout: default
+---
+
+<article itemscope itemtype="http://schema.org/Article">
+
+    <div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+            <meta itemprop="width" content="100">
+            <meta itemprop="url" content="{{ '/assets/company-logo.png' | prepend: site.baseurl | prepend: site.url }}">
+        </div>
+        <meta itemprop="name" content="Интернет инвестиции">
+        <meta itemprop="telephone" content="+79084610434">
+        <meta itemprop="address" content="Владивосток">
+    </div>
+    <div class="_2V-X" id="mainArticle" itemprop="mainEntityOfPage">
+        <meta itemprop="datePublished" content="{{ page.date }}">
+        <meta itemprop="dateModified" content="{{ page.dateModified }}">
+
+        <div class="containerTitle--wrap">
+            <div class="containerTitle">
+
+                <h1 class="pageTitle" itemprop="headline">
+                    {% if page.headline %}
+                        {{ page.headline }}
+                        {%  else %}
+                            {{ page.title }}
+                    {% endif %}
+                </h1>
+            </div>
+        </div>
+
+        <div class="articleBody" itemprop="articleBody">
+
+            {{ content }}
+
+
+
+        </div>
+        <!-- article body End -->
+
+        <aside class="relatePosts" itemscope itemtype="http://schema.org/WPSideBar">
+
+            {% for breadcrumb in page.breadcrumb %}
+            {% case breadcrumb.id %}
+            {% when "category" %}
+            {% assign pageCategory = breadcrumb.url | remove: "/" | remove: pageCollect %}
+            {% when "tag" %}
+            {% assign pageTag = breadcrumb.url | remove: "/" | remove: pageCollect | remove: pageCategory %}
+            {% endcase %}
+            {% endfor %}
+
+{% assign sizeRel--min = 2 %}
+{% assign sizeRel = 2 %}
+
+{% if pageCategory and pageTag %}
+            {% assign counterRelPost = 0 %}
+
+            {% for post in site.categories[pageCategory] %}
+
+            {% if post.tags contains pageTag and page.url != post.url %}
+
+            {% assign counterRelPost = counterRelPost | plus: 1 %}
+
+            {% if counterRelPost == sizeRel--min %}
+            {% assign goRelPosts = true %}
+            {% assign outputRel = 0 %}
+
+            {% for post in site.categories[pageCategory] %}
+
+            {% if post.tags contains pageTag and page.url != post.url %}
+
+            {% assign outputRel = outputRel | plus: 1 %}
+            {% include site/relPost.html %}
+            {% if outputRel == sizeRel %}
+            {% break %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endif %}
+
+
+            {% if counterRelPost == sizeRel--min %}
+            {% break %}
+            {% endif %}
+
+            {% endfor %}
+
+            {% unless goRelPosts %}
+            {% assign counterRelPost = 0 %}
+
+            {% for post in site.categories[pageCategory] %}
+
+            {% if post.url != page.url  %}
+
+            {% assign counterRelPost = counterRelPost | plus: 1 %}
+            {% if counterRelPost == sizeRel--min %}
+            {% assign goRelPosts = true %}
+            {% assign outputRel = 0 %}
+
+            {% for post in site.categories[pageCategory] %}
+
+            {% if post.url != page.url  %}
+
+            {% assign outputRel = outputRel | plus: 1 %}
+            {% include site/relPost.html %}
+            {% if outputRel == sizeRel %}
+            {% break %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+
+            {% endif %}
+            {% endif %}
+            {% if counterRelPost == sizeRel--min %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+            {% endunless %}
+
+            {% unless goRelPosts %}
+            {% assign counterRelPost = 0 %}
+
+            {% for post in site.posts %}
+
+            {% if post.url != page.url %}
+
+            {% assign counterRelPost = counterRelPost | plus: 1 %}
+            {% include site/relPost.html %}
+            {% endif %}
+            {% if counterRelPost == sizeRel %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+            {% endunless %}
+
+            {% elsif pageCategory %}
+            {% assign counterRelPost = 0 %}
+            {% for post in site.categories[pageCategory] %}
+
+            {% if post.url != page.url %}
+
+            {% assign counterRelPost = counterRelPost | plus: 1 %}
+
+            {% if counterRelPost == sizeRel--min %}
+            {% assign goRelPosts = true %}
+            {% assign outputRel = 0 %}
+            {% for post in site.categories[pageCategory] %}
+
+            {% if post.url != page.url %}
+
+            {% assign outputRel = outputRel | plus: 1 %}
+            {% include site/relPost.html %}
+            {% if outputRel == sizeRel %}
+            {% break %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endif %}
+            {% if counterRelPost == sizeRel--min %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+
+            {% unless goRelPosts %}
+            {% assign counterRelPost = 0 %}
+            {% for post in site.posts %}
+
+            {% if post.url != page.url %}
+
+            {% assign counterRelPost = counterRelPost | plus: 1 %}
+            {% include site/relPost.html %}
+            {% endif %}
+            {% if counterRelPost == sizeRel %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+            {% endunless %}
+
+
+            {% else %}
+
+            {% assign counterRelPost = 0 %}
+            {% for post in site.posts %}
+
+            {% if post.url != page.url  %}
+
+            {% assign counterRelPost = counterRelPost | plus: 1 %}
+            {% include site/relPost.html %}
+            {% endif %}
+            {% if counterRelPost == sizeRel %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+
+
+        </aside>
+
+        <footer class="footerArticle">
+            <section class="footerArticle__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+
+                {% if page.author %}
+{% assign authorName = page.author.name %}
+{% assign authorUrl = page.author.url %}
+{% assign authorPhoto = page.author.photo %}
+{% assign authorText = page.author.text %}
+                {% else %}
+{% assign authorName = site.author.name %}
+{% assign authorUrl = site.author.url %}
+{% assign authorPhoto = site.author.photo %}
+{% assign authorText = site.author.text %}
+                {% endif %}
+
+                <img alt="Аватар автора"
+                     src="data:image/gif;base64,R0lGODlhgAB9AIAAAP///wAAACH5BAEAAAEALAAAAACAAH0AAAKZjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1trm1QAADs=" data-src="{{authorPhoto | prepend: '/assets/image/author/' | prepend: site.baseurl | prepend: site.url }}"
+                     class="photo-author b-lazy">
+                <div class="authorDescr--wrap">
+                    <h3 class="author-box-title">
+                        <a rel="nofollow"
+                           target="_blank" href="{{authorUrl}}">
+                            <span itemprop="name">
+                                {{authorName}}
+                            </span>
+                        </a>
+                    </h3>
+                    <p itemprop="description">{{authorText}}</p>
+                </div>
+                <!-- VK Widget -->
+                <div id="vk_groups"></div>
+                <script>
+                    VK.Widgets.Group("vk_groups", {mode: 1, width: "auto", color1: '1D2436', color2: 'E0E0E0', color3: '47A046'}, 20003922);
+                </script>
+            </section>
+
+            <!--
+
+              <section class="comments">
+               <h3>Comments</h3>
+               <div class="comment">
+                   coment
+               </div>
+             </section>
+
+             -->
+        </footer>
+    </div>
+</article>
