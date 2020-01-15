@@ -33,11 +33,6 @@ layout: default
 <nav class="pagination--wrap">
     <ul class="pagination"  itemscope itemtype="http://schema.org/SiteNavigationElement">
 
-
-
-    <nav class="pagination--wrap">
-        <ul class="pagination" itemscope itemtype="http://schema.org/SiteNavigationElement">
-
             {% if paginator.previous_page %}
             <li>
                 <a class="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | remove_first: "/index.html"}}" itemprop="url"><span itemprop="name">&laquo;</span></a>
