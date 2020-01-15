@@ -361,8 +361,8 @@ dl {
 
 //Table start
 table {
-  overflow:auto;
-  max-height: 250px;
+  overflow: auto;
+  max-height: 450px;
   display: block;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -372,6 +372,8 @@ table {
   font-family: monospace;
   font-size: .90em;
   border-collapse: collapse;
+
+  box-sizing: border-box;
 }
 
 th {
@@ -581,7 +583,7 @@ tbody{
   padding-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
-
+border-radius: 65px;
 
 
   img {
@@ -834,9 +836,7 @@ tbody{
   .highlighter-rouge{
     background-color: transparent;
   }
-  .recommend{
-    border-radius: 1px;
-  }
+
   .footerArticle__author {
     border-radius: 1px;
   }
