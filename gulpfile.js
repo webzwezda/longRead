@@ -1,37 +1,66 @@
-var gulp        = require("gulp"),
-    sass        = require('gulp-sass'),
+"use strict";
+
+var config = {
+    server: {
+        baseDir: './build'
+    },
+    port: 3000,
+    notify: false,
+    open: false
+};
+
+var path = {
+    dist: {
+        main: 'build/',
+        assets: 'build/assets/',
+        js: 'build/assets/js/'
+    },
+    app: {
+        html: 'app/*.html',
+        scss: 'app/css/main.scss',
+        assets: 'app/assets/'
+
+    },
+    watch: {
+        html: 'app/**/*.html',
+        scss: 'app/_sass/**/*.scss',
+        js: 'app/js/**/*.js',
+        assets: 'app/assets/**/*.*'
+
+    },
+    clean: './build/'
+};
+
+var gulp = require("gulp"),
+    browserSync = require('browser-sync').create(),
+    sourcemaps = require('gulp-sourcemaps'),
+    sass = require('gulp-sass'),
+    del = require('del'),
     fileinclude = require('gulp-file-include'),
-    browserSync = require('browser-sync'),
-    gulpif      = require('gulp-if'),
-    sourcemaps  = require('gulp-sourcemaps'),
-    concat      = require('gulp-concat'),
-    uglify      = require('gulp-uglifyjs');
+    plumber = require('gulp-plumber'),
+    gulpif      = require('gulp-if')
+ ;
+
+var isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == "dev";
 
 
-var isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == "development";
+gulp.task('browserSync', function(done) {
+    browserSync.init(config);
+    done();
+});
 
 gulp.task('html', function(calback) {
-    gulp.src(['./app/index.html', './app/post.html'])
+    gulp.src('./app/*.html')
         .pipe(fileinclude({
             prefix: '@@',
             basepath: './app/_include'
         }))
-        .pipe(gulp.dest('./build'));
+        .pipe(gulp.dest('./build'))
+        .pipe(browserSync.reload({stream:true}));
     calback()
 });
 
-gulp.task('browser-sync', function() {
-    browserSync({
-        server: {
-            baseDir: "./build"
-        },
-        port: 3000,
-        notify: false,
-        open: false
-    });
-});
-
-gulp.task('sass', function () {
+gulp.task('scss', function () {
     return gulp.src('./app/_sass/main.scss')
         .pipe(gulpif(isDevelopment, sourcemaps.init()))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -40,28 +69,38 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task("can__min--js", function () {
-    return gulp.src( ['!./app/assets/js/socialLocker.js', './app/assets/**/*.js'] )
-        .pipe(concat('libs-min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./build/assets/js'))
-        .pipe(browserSync.reload({stream:true}));
+gulp.task('js', function(done) {
+    gulp.src('app/js/**/*.js')
+        .pipe(plumber())
+        .pipe(gulpif(isDevelopment, sourcemaps.init()))
+        .pipe(gulpif(isDevelopment ,sourcemaps.write()))
+        .pipe(gulp.dest(path.dist.js))
+        .pipe(browserSync.reload({ stream: true }));
+    done();
 });
 
-gulp.task("move", function () {
-    return gulp.src('./app/assets/js/socialLocker.js')
-        .pipe(gulp.dest('./build/assets/js'))
+gulp.task('clean', function(done) {
+    del.sync(path.clean);
+    done();
 });
 
-gulp.task("assets", function(){
-    return gulp.src(["!./app/assets/**/*.js" ,"./app/assets/**"])
-        .pipe(gulp.dest("./build/assets"))
+gulp.task('move', function(done) {
+    gulp.src('app/assets/**')
+        .pipe(gulp.dest(path.dist.assets));
+    done();
 });
 
-gulp.task('default', ['browser-sync', 'move', 'html', "sass", 'assets', 'can__min--js'], function() {
-    gulp.watch(['app/_include/*.*',"./app/index.html","./app/post.html","./app/category.html"], ['html']);
-    gulp.watch('app/_sass/**/*.scss', ['sass']);
-    gulp.watch('./app/assets/**/*.*' , ['assets']);
-    gulp.watch('./app/assets/**/*.js' , ['can__min--js']);
-    gulp.watch('build/index.html', browserSync.reload);
+gulp.task('build', gulp.series('clean', 'html', 'scss', 'js',  function(done) {
+    done();
+}));
+
+
+gulp.task('watch', function() {
+    gulp.watch(path.watch.html, gulp.series('html'));
+    gulp.watch(path.watch.scss, gulp.series('scss'));
+    gulp.watch(path.watch.js, gulp.series('js'));
+    gulp.watch([path.watch.assets], gulp.series('move'));
 });
+
+// задача по умолчанию
+gulp.task('default', gulp.series('clean', 'move', 'build', gulp.parallel('browserSync', 'watch')));

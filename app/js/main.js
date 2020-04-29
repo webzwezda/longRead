@@ -5,6 +5,3 @@ function init() {
 
 }
 
-var bLazy = new Blazy({
-
-});

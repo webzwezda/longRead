@@ -1,24 +1,15 @@
 ## About repository
 
-This repository contains three branches
+This repository contains second branches
 
 branch | description 
 ---|---
 html | Only html template
-
-## Example site
-
-[site](https://webzwezda.github.io/viewofthepast/index.html)
+jekyll | jekyll template
 
 ## How start
 
-Git clone 
-
-​    
-
 ### Install modules gulp
-
-Use ubuntu 19.04 i had a problem with nodejs, fix it install [nodejs v11](https://github.com/nodesource/distributions) and delete [.node-gyp](https://codeforgeek.com/make-failed-with-exit-code-2/)
 
     sudo npm i -g npm
 
