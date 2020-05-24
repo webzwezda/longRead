@@ -1,0 +1,212 @@
+.mailSubs{
+  background-color: #5145cd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  p{
+    color: #cddbfe;
+  }
+
+&__descript{
+
+h2{
+  font-size: 28px;
+  color: #fff;
+  margin-top: 5px;
+  margin-bottom: 0;
+  line-height: calc(2em - 18px);
+}
+  p{
+
+    line-height: calc(2rem - 5px);
+  }
+}
+  &__input{
+    display: flex;
+    flex-direction: column;
+
+    input{
+      transition-duration: .15s;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+
+      line-height: 1.5rem;
+      font-size: 1rem;
+      border-width: 0;
+      border-radius: .375rem;
+      background-color: #fff;
+
+    }
+    button{
+      transition-duration: .15s;
+      background-color: #6875f5;
+
+      color: #fff0f0;
+      font-weight: bold;
+      line-height: 1.5rem;
+      font-size: 1.05rem;
+
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      border-width: 0;
+      border-radius: .375rem;
+
+    }
+    p{
+      color: #cddbfe;
+      line-height: calc(2rem - 7px);
+      a{
+        color: #fff;
+      }
+    }
+  }
+}
+
+.overiew__buy{
+  display: block;
+  max-width: 80%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 30px ;
+  margin-bottom: 10px ;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+  color: #e8ecf1 !important;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #d24d57;
+  text-decoration: none;
+  border-radius: .175rem;
+
+  &:hover{
+    background-color: darken(#d24d57, 10%);
+  }
+}
+
+@include for-tablet-landscape-up {
+  .mailSubs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: .1rem;
+
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: .375rem;
+
+    &__descript{
+flex-basis: 150%;
+      margin-left: 30px;
+
+      h2{
+        font-size: 25px;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 1;
+      }
+      p{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 17px;
+        line-height: calc(1em + 8px);
+      }
+
+    }
+    &__input{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: stretch;
+
+      margin-right: 30px;
+
+        input{
+          transition-duration: .15s;
+          padding-top: .75rem;
+          padding-bottom: .75rem;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-left: 0;
+          margin-right: 10px;
+
+
+          line-height: 1;
+          font-size: 16px;
+          border-radius: .375rem;
+          border-color: transparent;
+          background-color: #fff;
+          border-width: 0;
+
+          width: calc(66% - 40px);
+
+        }
+        button{
+          transition-duration: .15s;
+          background-color: #6875f5;
+
+          color: #fff0f0;
+          font-weight: bold;
+          line-height: 1;
+          font-size: 16px;
+
+          padding-top: 0;
+          padding-bottom: 0;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-left: 0;
+          margin-right: 10px;
+
+          border-width: 0;
+          border-color: transparent;
+          border-radius: .375rem;
+
+          width: 34%;
+        }
+        p{
+          font-size: 14px;
+          line-height: 1;
+          flex-basis: 100%;
+          padding-left: 0;
+          width: 100%;
+          a{
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+

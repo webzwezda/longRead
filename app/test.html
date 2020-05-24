@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Что такое идеальный шаблон для дизайна контента?</title>
+    <meta name="theme-color" content="#fafafa">
+    <link href="/assets/image/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="/assets/js/main.js"></script>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+
+@@include("header.html")
+
+<main class="siteMain" itemscope itemprop="mainContentOfPage">
+    @@include("breadcrumb.html")
+
+
+
+
+
+
+    <div class="containerTitle--wrap">
+        <div class="containerTitle">
+
+            <h1 class="pageTitle" >
+                Это описание должно быть длинным для тестирования макета минимум в 70 знаков Regular
+            </h1>
+        </div>
+    </div>
+
+    <div class="articleBody" >
+
+        <p class="p0">Это первый параграф и является самым важным так как описывает страницу, должен чем то выделяться и быть примерно в 170 знаков, но это не обязательно. <code>code</code>,  В нем желательно использовать такие тэги как: <em>em</em>, <strong>strong</strong>, <strong><em>em and strong</em></strong>, <code>code</code></p>
+
+
+        <div class="thumb-wrap">
+
+            <iframe width="560"
+                    height="315"
+                    src="https://youtube.com/embed/DlRqUbQio8M"
+                    srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;
+
+                &lt;a href=https://youtube.com/embed/DlRqUbQio8M?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/DlRqUbQio8M/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;"
+
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen=""
+                    title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition"></iframe>
+        </div>
+
+        <a class="overiew__buy" href="#">Получить</a>
+
+    </div>
+    <!-- article body -->
+
+
+
+
+</main>
+
+
+<footer class="siteFooter">
+
+    @@include("footerMini.html")
+
+</footer>
+<script async src="/assets/js/blazy.js"></script>
+</body>
+</html>

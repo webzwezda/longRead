@@ -1,0 +1,328 @@
+.pageTitle--arigatoH1{
+ text-align: center;
+}
+.arigato{
+  margin-top: 10px;
+  &__main{
+
+  }
+
+  &__second{
+
+    h2{
+      text-align: center;
+      font-size: 30px;
+      line-height: 38px;
+      margin-top: 46px;
+      margin-bottom: 46px;
+    }
+  }
+}
+
+.main {
+  &--headImg {
+    flex: 0 1 auto;
+    text-align: center;
+
+    img {
+      width: auto;
+    }
+  }
+  &--download{
+    flex: 0 1 50%;
+
+    h2{
+      text-align: center;
+      font-size: 26px;
+      color: darken(#019875, 5%);
+      text-transform: uppercase;
+      line-height: 44px;
+      margin-top: 32px;
+      margin-bottom: 0;
+    }
+    p{
+      text-align: center;
+      font-size: 19px;
+      line-height: 33px;
+      margin-top: 26px ;
+      margin-bottom: 26px;
+    }
+  }
+}
+
+
+
+.offer--two, .offer--tree{
+  margin-top: 50px;
+}
+
+.offer--one, .offer--two, .offer--tree{
+
+
+
+  .autar{
+    border-radius: 50%;
+  }
+
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(4){
+      display: block;
+    }
+  }
+
+  padding-left: 10px;
+  padding-right: 10px;
+  img{
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p{
+    margin-top: 30px  ;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h3{
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  a{
+
+      display: block;
+      max-width: 80%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-top: 30px ;
+      margin-bottom: 10px ;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-align: center;
+      color: #e8ecf1 !important;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      background-color: #2c82c9;
+      text-decoration: none;
+      border-radius: .175rem;
+
+      &:hover{
+        background-color: darken(#d24d57, 10%);
+      }
+
+  }
+}
+
+.howFor--offer{
+
+}
+
+.howFor--h2{
+  text-align: center;
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
+  font-size: 32px !important;
+  line-height: 44px !important;
+}
+
+.sub-meilul{
+
+  font-size: 16px;
+
+  display: table;
+  margin: 0 auto;
+
+}
+
+
+.subFinal--img{
+
+}
+
+.subFinal {
+
+  margin-top: 40px;
+
+  p{
+    margin: 30px 0;
+  }
+
+  &--form{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-bottom: 20px;
+  }
+
+  &--input {
+    font-size: 18px;
+    padding: 10px;
+    border-color: transparent;
+    background-color: #fff;
+    border-width: 1px;
+    border-bottom: 3px solid #8842d5;
+    outline: none;
+    margin-bottom: 30px;
+    border-radius: 1px;
+
+    &:focus {
+      color: #000000;
+      border: 1px solid #7221C9;
+      border-bottom: 3px solid #8842d5;
+      border-radius: 1px;
+    }
+  }
+
+
+
+  &--btn {
+    border-radius: 1px;
+    border-width: 0;
+    background-color: #570BA9;
+    color: #fff0f0;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:hover{
+      background-color: #7221C9;
+    }
+  }
+
+}
+
+  @include for-tablet-portrait-up {
+
+  }
+
+  @include for-tablet-landscape-up {
+
+    .arigato__main {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .main {
+      &--headImg {
+        flex: 0 1 auto;
+        text-align: center;
+
+        img {
+          width: auto;
+        }
+      }
+
+      &--download {
+        flex: 0 1 50%;
+
+        h2 {
+          text-align: center;
+          font-size: 26px;
+          color: darken(#019875, 5%);
+          text-transform: uppercase;
+          line-height: 44px;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          text-align: center;
+          font-size: 19px;
+          line-height: 33px;
+          margin-top: 26px;
+          margin-bottom: 26px;
+        }
+      }
+    }
+    .offer--two, .offer--tree {
+      margin-top: 0;
+    }
+    .second--offer {
+      display: grid;
+      grid-template-rows: repeat(1, auto);
+      grid-template-columns: repeat(3, 1fr);
+
+      .offer--one, .offer--two, .offer--tree {
+        display: grid;
+        grid-template-rows: 45% 20% 20% 1fr;
+        grid-template-columns: repeat(1, auto);
+      }
+    }
+    .howFor--offer {
+      display: grid;
+      grid-template-rows: repeat(1, auto);
+      grid-template-columns: repeat(3, 1fr);
+
+      .offer--one, .offer--two, .offer--tree {
+        display: grid;
+        grid-template-rows: auto 45%;
+        grid-template-columns: repeat(1, auto);
+      }
+    }
+
+    .sub-meilul {
+
+
+      display: table;
+      margin: 0 auto;
+
+      li {
+        font-size: 22px !important;
+      }
+    }
+
+
+    .subFinal {
+
+      margin-top: 60px;
+      margin-bottom: 40px;
+      p {
+
+      }
+
+      &--form {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        margin-bottom: 50px;
+        margin-top: 75px;
+      }
+
+    }
+  }
+
+  @include for-desktop-up {
+
+    .sub-meilul {
+
+      li{
+        font-size: 22px !important;
+      }
+    }
+  }
+
+    @include for-big-desktop-up {
+
+      .sub-meilul {
+
+        li {
+          font-size: 24px !important;
+        }
+      }
+    }
+

@@ -295,47 +295,7 @@ dl {
   width: 100%;
 }
 
-// Footnote Start
-.footnotes {
 
-  ol {
-
-    background-color: darken(#ECF1F8, 1%);
-    padding-left: calc(1rem + 5px);
-    padding-right: 10px;
-
-    padding-top: 7px;
-    padding-bottom: 10px;
-
-    &::before {
-      content: "Сноска";
-      display: block;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      margin-left: -10px;
-      font-size: calc(1rem * 1.1);
-      font-weight: bold;
-      line-height: 1.6em;
-      color: #424242;
-    }
-
-    li {
-      margin-left: 10px;
-    }
-
-    p {
-      padding-left: 0;
-    }
-  }
-
-}
-
-.footnote, .reversefootnote {
-  color: #d32f2f !important;
-  font-weight: normal !important;
-}
-
-// Footnote End
 
 // VIDEO Start
 .thumb-wrap {

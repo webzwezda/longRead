@@ -62,17 +62,42 @@ Command only generate *main.css*
     NODE_ENV=prod gulp sass
 
 
-    if (screenWidth < 400) {
-    
-                      var hell0 = hell.content.querySelectorAll('#hell0--max400');
-                      console.log(hell0[0]);
-    
-                      var artileAsideHell0 = document.getElementById('hell0');
-    
-                      var cloneHell0 = document.importNode(hell0[0], true);
-                      artileAsideHell0.append(cloneHell0);
-                  } else if (screenWidth > 400 && screenWidth < 1000) {
-                      document.write('tablet');
-                  } else {
-                      document.write('desctop');
-                  }
+    <div class="faq-block" itemscope="" itemtype="https://schema.org/FAQPage" style="">
+        <div class="accordion-user">
+            <h2 class="faq-block__title">Часто задаваемые вопросы о Форекс</h2>
+        </div>
+        <div class="panel-user">
+            <div class="faq-block__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 class="faq-block__question" itemprop="name">&#9989; В чем физический смысл вымпела?<span class="faq-block__arrow"></span></h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div class="faq-block__answer" itemprop="text">
+                        <a href="https://www.kalita-finance.ru/obuchenie/statii/figura-vimpel-foreks">Это небольшая коррекция с быстрым продолжением основного движения</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="faq-block__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 class="faq-block__question" itemprop="name">&#9989; Как торговать вымпел?<span class="faq-block__arrow"></span></h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div class="faq-block__answer" itemprop="text">
+                        <a href="https://www.kalita-finance.ru/obuchenie/statii/figura-vimpel-foreks">Можно долиться по тренду или открыть первую сделку, если не успели войти ранее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-block__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 class="faq-block__question" itemprop="name">&#9989; Формируется ли вымпел на спокойном рынке?<span class="faq-block__arrow"></span></h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div class="faq-block__answer" itemprop="text">
+                        <a href="https://www.kalita-finance.ru/obuchenie/statii/figura-vimpel-foreks">Нет, похожие фигуры могут быть, но они не несут пользы для трейдера</a>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-block__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 class="faq-block__question" itemprop="name">&#9989; Может ли вымпел быть фигурой разворота?<span class="faq-block__arrow"></span></h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div class="faq-block__answer" itemprop="text">
+                        <a href="https://www.kalita-finance.ru/obuchenie/statii/figura-vimpel-foreks">Если есть опора на уровень, то может</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
