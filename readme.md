@@ -59,7 +59,7 @@ It's command not put *sourceMap* in **main.css**
 
 Command only generate *main.css*
 
-    NODE_ENV=prod gulp sass
+    NODE_ENV=prod gulp scss
 
 
     <div class="faq-block" itemscope="" itemtype="https://schema.org/FAQPage" style="">
