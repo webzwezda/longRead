@@ -11,3 +11,6 @@ description: 'Description for home page in index.md'
 ---
 
 Я повелитель миров и уничтожитель грязи в туалете
+
+
+<img  src="http://placehold.it/320X370/455a64/fff">

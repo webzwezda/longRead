@@ -39,6 +39,22 @@ layout: default
         </div>
         <!-- article body End -->
 
+        <form class="mailSubs" action="/mail.php" method="POST">
+
+            <div class="mailSubs__descript">
+                <h2>Как торговать OBV ?</h2>
+                <p>Этот инструмент помогает торговать разворотные модели, руководство содержит инфографику с видами дивергенций</p>
+            </div>
+
+
+            <div class="mailSubs__input">
+                <input type="text" class="form-control" name="Email Adress" placeholder="Введите Емейл">
+                <button type="submit" class="btn btn-primary">
+                    Получить файл</button>
+                <p>Мы заботимся о защите ваших данных. Прочтите нашу <a href="#">Политику Конфиденциальности</a></p>
+            </div>
+
+        </form>
         <aside class="relatePosts" itemscope itemtype="http://schema.org/WPSideBar">
 
             {% for breadcrumb in page.breadcrumb %}

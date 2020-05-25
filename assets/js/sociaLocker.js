@@ -1,2 +1,0 @@
-function socialLock(){document.getElementById("btnRemove-share").onclick=removeShare;var t=document.getElementsByClassName("sociaLocker__btns");for(i=0;i<t.length;i++)t[i].onclick=popUp}function popUp(t){window.open(t.target.value,"pop-up","left=20,top=20,width=500,height=500,toolbar=1,resizable=0"),removeShare()}function removeShare(){var t=document.querySelector("#productrow"),e=(t.content.querySelectorAll("p"),document.getElementById("sharePage")),o=document.importNode(t.content,!0);return setTimeout(function(){e.after(o),e.remove()},800)}socialLock();
-

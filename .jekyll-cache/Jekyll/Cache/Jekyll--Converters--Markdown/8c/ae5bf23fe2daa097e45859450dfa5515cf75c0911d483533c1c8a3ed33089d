@@ -1,0 +1,193 @@
+I"00<p class="p0">Ну тут описание страницы котарая содержит <strong><em>em &amp; strong</em></strong></p>
+
+<ol id="anchor">
+  <li><a href="#anchor1">Заголовки</a>
+    <ol>
+      <li><a href="#anchor1-1">Термины</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2>Заголовки</h2>
+
+<p><a href="/url" target="_blank">title</a></p>
+
+<h3 id="anchor1-1">Термины</h3>
+
+<ul>
+  <li>Термины</li>
+  <li>Сноски</li>
+</ul>
+
+<blockquote>
+  <p>все профессии нужны все проффессии нужны</p>
+</blockquote>
+
+<h4>Термин</h4>
+
+<p>Вот так выглядит простой пример термина, простой абзац и после него через двоеточие его расшифровка</p>
+
+<dl>
+  <dt>Боссы</dt>
+  <dd>
+    <p>это крупные, агрессивные и опасные монстры, которые являются существенной проблемой для неподготовленных игроков</p>
+  </dd>
+</dl>
+
+<h4>Сноска</h4>
+
+<p>Мощьный босс ахмудин<sup id="fnref:first" role="doc-noteref"><a href="#fn:first" class="footnote">1</a></sup></p>
+
+<h2>Изображения</h2>
+
+<h3>Figure</h3>
+
+<figure>
+    <img class="b-lazy" itemprop="image" data-src="http://localhost:4000/assets/image/src/konosuba.jpg" src="data:image/gif;base64,R0lGODlhswBQAIAAAP///wAAACH5BAEAAAEALAAAAACzAFAAAAKPjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusoKWAAAOw==" alt="alt" />
+    <figcaption>Коносуба блэд нука давай невъебенно большое описание что бы я ахуел, ну че за х... давай еще больше а то непонятно, ай блять интерленьяж нид поправить</figcaption>
+</figure>
+
+<h3>img</h3>
+
+<p>Картинка должна быть минимум в <code class="highlighter-rouge">420px</code> потому что на маленьких экранах растягивается во всю ширину</p>
+
+<p><img src="http://localhost:4000/assets/image/src/537x240.jpg" alt="aqua" itemprop="image" /></p>
+
+<h2>Text</h2>
+
+<p>Разберем пару вариантов</p>
+
+<ul>
+  <li>абзацы</li>
+  <li>много текста в спесках</li>
+</ul>
+
+<h3>абзацы</h3>
+
+<p>Мы знаем что делать пирсинг пистолетом не больно, а если оценивать по десяти бальной шкале то это 3 из 10. Но у этого есть один большой или даже очень большой минус.</p>
+
+<p>При проколе пистолетом мочки мы получим рваную рану, а если будем прокалывать хрящ то получим в нем трещину, а она заживает жуть как долго и у этого есть реально плохие последствия в виде келойда.</p>
+
+<p>Ко всем этим недостаткам добавляется дополнительное наращивание коши на месте прокола, это может быть не заметно окружающим но вас это будет тревожить.</p>
+
+<h3>list ol</h3>
+
+<ol>
+  <li>При покраснении и припухлости мочки пользуются слабым раствором марганцовки. Несколько раз в день им промывают проблемное место, передвигая сережку. Постепенно опухоль спадает. При необходимости применяют антибактериальные мази: Целестодерм, Левомеколь, тетрациклиновую мазь. При сильной боли деткам дают ибупрофен или парацетамол в соответствующей возрасту дозировке.</li>
+  <li>При кровоточивости, которая продолжается несколько дней и даже недель, стоит насторожиться. Обычно после прокола выбегает жидкость (сукровица), а появление крови возможно по разным причинам (одна из них – травмирование сосуда при прокалывании и развитие гиперемии). Сережку придется вынуть, а ранку обработать антисептиком.</li>
+  <li>При нагноении помогает обработка проблемного участка спиртом или перекисью водорода. Хорошо помогает Целестодерм, цинковая мазь. Из народного арсенала выручает сок алоэ, масло чайного дерева, настойка календулы, раствор морской соли.</li>
+</ol>
+
+<h2>Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>title2</th>
+      <th>title3</th>
+      <th>title4</th>
+      <th>title</th>
+      <th>title2</th>
+      <th>title3</th>
+      <th>title4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+      <td>description</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>code</h2>
+
+<p>Пример кода для теста работаспособности тега <code class="highlighter-rouge">code</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">function</span> <span class="nx">setSomething</span><span class="p">(</span><span class="nx">bStyle</span><span class="p">,</span> <span class="nx">sProp</span><span class="p">,</span> <span class="nx">sVal</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">bSet</span> <span class="o">=</span> <span class="nb">Boolean</span><span class="p">(</span><span class="nx">sVal</span><span class="p">),</span> <span class="nx">fAction</span> <span class="o">=</span> <span class="nx">aDOMFunc</span><span class="p">[</span><span class="nx">bSet</span> <span class="o">|</span> <span class="nx">bStyle</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="nx">aArgs</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">bSet</span> <span class="p">?</span> <span class="mi">3</span> <span class="p">:</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="nx">aNodeList</span> <span class="o">=</span> <span class="nx">bStyle</span> <span class="p">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">cssNodes</span> <span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">nodes</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">bSet</span> <span class="o">&amp;&amp;</span> <span class="nx">bStyle</span><span class="p">)</span> <span class="p">{</span> <span class="nx">aArgs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span> <span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span>
+      <span class="kd">var</span> <span class="nx">nItem</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">nLen</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">nodes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+      <span class="nx">nItem</span> <span class="o">&lt;</span> <span class="nx">nLen</span><span class="p">;</span>
+      <span class="nx">fAction</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">aNodeList</span><span class="p">[</span><span class="nx">nItem</span><span class="o">++</span><span class="p">],</span> <span class="nx">aArgs</span><span class="p">)</span>
+    <span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">follow</span> <span class="o">=</span> <span class="nx">setSomething</span><span class="p">.</span><span class="nx">caller</span><span class="p">;</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="thumb-wrap">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/I8pqI4Uo4Ow" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/I8pqI4Uo4Ow?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/I8pqI4Uo4Ow/hqdefault.jpg alt='video about the worldoooo'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="video about the worldoooo"></iframe>
+</div>
+
+<h2>SociaLocker</h2>
+
+<section id="sharePage" class="sociaLocker">
+    <h3 id="brr">Контент спрятался</h3>
+    <p>Что бы его увидеть нужно поделиться страницей в социальных сетях, зарание спасибо дорогой посетитель</p>
+    <div class="sociaLocker__btns"><button class="vk-mini" value="http://vkontakte.ru/share.php?url=https://webzwezda.github.io">Vk</button><button class="ok-mini">Ok</button><button class="fb-mini">Fb</button><button class="pin-mini">Pin</button><button class="tw-mini">Tw</button></div>
+    <button id="btnRemove-share" class="shareClose">Я уже поделился</button>
+
+    <template id="productrow">
+        <p>content</p>
+    </template>
+</section>
+
+<h2>recomend</h2>
+
+<nav class="recommend">
+    <img alt="Аватар автора" src="data:image/gif;base64,R0lGODlhgAB9AIAAAP///wAAACH5BAEAAAEALAAAAACAAH0AAAKZjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1trm1QAADs=" data-src="http://localhost:4000/assets/image/author/kozel.jpg" class="photo-recommend b-lazy" />
+
+    <div class="rek--wrap">
+        <h3><span>Ознакомься с</span></h3>
+        <div class="link-rek">
+            <a target="_blank" href="url">alt</a>
+        </div>
+    </div>
+</nav>
+
+<h2>video</h2>
+
+<video controls="">
+<source src="http://localhost:4000/assets/video/pronama.mp4" type="video/mp4" />
+</video>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:first" role="doc-endnote">
+      <p>ахмудин это бос щупальцами и нужно по ним бить и не иначе <a href="#fnref:first" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

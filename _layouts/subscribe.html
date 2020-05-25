@@ -1,7 +1,6 @@
 ---
-layout: compress
+layout: none
 ---
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -18,14 +17,14 @@ layout: compress
     <nav class="breadCrumb--wrap" >
         <ul class="breadCrumb" >
             <li >
-                <a {% if page.url == site.url or page.url == '/' %}class="breadCrumb--active"{% endif %} itemprop="item" href="/">
-                    <span >Главная</span>
+                <a {% if page.url == site.url or page.url == '/' %}class="breadCrumb--active"{% endif %} itemprop="item" href="{{site.url | append: '/' }}">
+                <span >Главная</span>
                 </a>
             </li>
 
             <li>
                 <a {% if page.url contains '/all/' %}class="breadCrumb--active"{% endif %} itemprop="item" href="/all/">
-                    <span>Все посты</span>
+                <span>Все посты</span>
                 </a>
             </li>
 
@@ -64,25 +63,25 @@ layout: compress
 
     {% if page.breadcrumb %}
 
-<script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {% assign breadCounter = 0 %}
-    {% if page.breadcrumb %}
-    {% for breadcrumb in page.breadcrumb %}
-    {% assign breadCounter = breadCounter | plus: 1 %}
-   {
-    "@type": "ListItem",
-    "position": {{breadCounter}},
-    "name": "{{ breadcrumb.name }}",
-    "item": "{{ breadcrumb.url | prepend: site.baseurl | prepend: site.url | append: '/' }}"
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-    {% endif %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {% assign breadCounter = 0 %}
+                {% if page.breadcrumb %}
+                {% for breadcrumb in page.breadcrumb %}
+                {% assign breadCounter = breadCounter | plus: 1 %}
+                {
+                    "@type": "ListItem",
+                    "position": {{breadCounter}},
+                "name": "{{ breadcrumb.name }}",
+                "item": "{{ breadcrumb.url | prepend: site.baseurl | prepend: site.url | append: '/' }}"
+                }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+                {% endif %}
 
-    ]}
+            ]}
     </script>
     {% endif %}
 
@@ -93,10 +92,10 @@ layout: compress
 
 
 <footer class="siteFooter">
-    {% include site/footer.html %}
+    {% include site/footerMini.html %}
 </footer>
 {% if page.sociaLocker == 'true' %}
-    <script async src="/assets/js/socialLocker.js"></script>
+<script async src="/assets/js/socialLocker.js"></script>
 {% endif %}
 <script async src="{{ "/assets/js/blazy.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 </body>

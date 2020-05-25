@@ -38,6 +38,11 @@ compress_html:
 
 permalink: /:categories/:title/
 
+collections:
+  overview:
+    output: true
+    permalink: /:collection/:categories/:title/
+
 exclude:
   - Gemfile
   - Gemfile.lock
