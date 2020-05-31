@@ -14,8 +14,21 @@
     <meta property="og:locale" content="ru" />
     <meta name="description" content="{{ page.description }}" />
     <meta property="og:description" content="{{ page.description }}" />
-    <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url | remove_first: "/index.html" | append: '/' | replace: '//', '/'}}" />
-    <meta property="og:url" content="{{ site.baseurl | prepend: site.url }}{{ page.url | remove_first: "/index.html" | append: '/' | replace: '//', '/'}}" />
+
+    {% if page.pagination.enabled == true %}
+    <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.permalinkD | remove_first: "/index.md" | remove_first: "/index.html" | append: '/' | replace: '//', '/'}}" />
+    <meta property="og:url" content="{{ site.baseurl | prepend: site.url }}{{ page.permalinkD | remove_first: "/index.md" | remove_first: "/index.html" | append: '/' | replace: '//', '/'}}" />
+    {% elsif page.canonical %}
+    <link rel="canonical" href="{{ page.canonical }}" />
+    <meta property="og:url" content="{{ page.canonical }}" />
+    {% else %}
+    <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url | remove_first: "/index.md" | append: '/' | replace: '//', '/'}}" />
+    <meta property="og:url" content="{{ site.baseurl | prepend: site.url }}{{ page.url | remove_first: "/index.md" | append: '/' | replace: '//', '/'}}" />
+    {% endif %}
+
+
+
+
     <meta property="og:site_name" content="{{ site.title }}" />
     {% if page.image %}
         <meta property="og:image" content="{{ page.image.url | prepend: "/assets/image/src" | prepend: site.baseurl | prepend: site.url }}" />
