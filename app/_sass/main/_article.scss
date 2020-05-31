@@ -614,6 +614,12 @@ border-radius: 65px;
 }
 // recommend End
 
+.comments{
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 @include for-tablet-portrait-up {
   // Related Posts Start
   .relatePosts {
@@ -799,6 +805,11 @@ border-radius: 65px;
 
   .footerArticle__author {
     border-radius: 1px;
+  }
+  .comments{
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
